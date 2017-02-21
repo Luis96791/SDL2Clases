@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1487694437 source:/home/luis/Escritorio/SDL_TrueTypeFont/main.cpp
+	<iostream>
+	<SDL2/SDL.h>
+	<stdio.h>
+	<stdlib.h>
+	<SDL2/SDL_image.h>
+	<SDL2/SDL_ttf.h>
+	"Background.h"
+	"Character.h"
+	"KeyPressed.h"
+	"Mouse.h"
+
+1484260861 source:/home/luis/Escritorio/SDL_TrueTypeFont/SDL_TrueTypeFont.cpp
+	"SDL_TrueTypeFont.h"
+
+1484253162 /home/luis/Escritorio/SDL_TrueTypeFont/SDL_TrueTypeFont.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+	<SDL2/SDL_pixels.h>
+	<iostream>
+
+1484438925 /home/luis/Escritorio/SDL_TrueTypeFont/RectBackgroundPosition.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
+
+1484439355 source:/home/luis/Escritorio/SDL_TrueTypeFont/RectBackgroundPosition.cpp
+	"RectBackgroundPosition.h"
+
+1484440343 /home/luis/Escritorio/SDL_TrueTypeFont/Background.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
+
+1485184158 source:/home/luis/Escritorio/SDL_TrueTypeFont/Background.cpp
+	"Background.h"
+
+1485531921 source:/home/luis/Escritorio/SDL_TrueTypeFont/Character.cpp
+	"Character.h"
+
+1485531876 /home/luis/Escritorio/SDL_TrueTypeFont/Character.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<iostream>
+
+1484753268 source:/home/luis/Escritorio/SDL_TrueTypeFont/KeyPressed.cpp
+	"KeyPressed.h"
+
+1484753203 /home/luis/Escritorio/SDL_TrueTypeFont/KeyPressed.h
+	<SDL2/SDL.h>
+	<iostream>
+
+1485554148 source:/home/luis/Escritorio/SDL_TrueTypeFont/Mouse.cpp
+	"Mouse.h"
+
+1485554147 /home/luis/Escritorio/SDL_TrueTypeFont/Mouse.h
+	"Character.h"
+	<SDL2/SDL.h>
+	<iostream>
+
