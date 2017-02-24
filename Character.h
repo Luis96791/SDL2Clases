@@ -11,18 +11,20 @@ class Character
     public:
         SDL_Rect rect_character;
         SDL_Texture* texture;
+        SDL_Renderer* renderer;
         const Uint8* state;
         int x, y, w, h;
 
-        Character(SDL_Renderer* renderer, char* name_character, int x, int y, int w, int h);
-        void showCharacter(SDL_Renderer* renderer);
+        Character(SDL_Renderer* renderer, char* name_character);
+        void setPositionOfCharacter(int x, int y);
+        void setSize(int w, int h);
+        void showCharacter();
         void moveToRight(int move_units, SDL_Keycode keycode);
         void moveToLeft(int move_units, SDL_Keycode keycode);
         void moveToUp(int move_units, SDL_Keycode keycode);
         void moveToDown(int move_units, SDL_Keycode keycode);
         int getRectPositionX();
         bool collisionWithBorder(const int WINDOW_WIDTH, const int WINDOW_HEIGHT, string direction);
-        void rotation(int velocity, string orientation);
         virtual ~Character();
     protected:
     private:

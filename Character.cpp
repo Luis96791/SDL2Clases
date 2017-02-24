@@ -1,18 +1,32 @@
 #include "Character.h"
 
-Character::Character(SDL_Renderer* renderer, char* name_character, int x, int y, int w, int h)
+Character::Character(SDL_Renderer* renderer, char* name_character)
 {
     this->texture = IMG_LoadTexture(renderer, name_character);
-    this->rect_character.x = x;
-    this->rect_character.y = y;
-    this->rect_character.w = w;
-    this->rect_character.h = h;
+
+    this->renderer = renderer;
+    this->rect_character.x = 0;
+    this->rect_character.y = 0;
+    this->rect_character.w = 40;
+    this->rect_character.h = 40;
     this->state = SDL_GetKeyboardState(NULL);
 }
 
 int Character::getRectPositionX()
 {
     return this->rect_character.x;
+}
+
+void Character::setPositionOfCharacter(int x, int y)
+{
+    this->rect_character.x = x;
+    this->rect_character.y = y;
+}
+
+void Character::setSize(int w, int h)
+{
+    this->rect_character.w = w;
+    this->rect_character.h = h;
 }
 
 void Character::moveToRight(int move_units, SDL_Keycode keycode)
@@ -117,14 +131,9 @@ bool Character::collisionLeft()
     return false;
 }
 
-void Character::rotation(int velocity, string orientation)
+void Character::showCharacter()
 {
-
-}
-
-void Character::showCharacter(SDL_Renderer* renderer)
-{
-    SDL_RenderCopy(renderer, this->texture, NULL, &this->rect_character);
+    SDL_RenderCopy(this->renderer, this->texture, NULL, &this->rect_character);
 }
 
 Character::~Character()

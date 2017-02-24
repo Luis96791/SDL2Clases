@@ -41,10 +41,9 @@ int main()
     background->resizeBackground(1200, 600);
 
     Text* text = new Text("Vera.ttf",renderer);
-    text->editText("Hello World...!");
-    text->setColor(120, 90, 150, 0);
+    text->setColor(100, 100, 100, 100);
     text->setPositionOfText(90, 20);
-    text->setFontSize(50);
+    text->setFontSize(38);
 
     while( 1 )
     {
