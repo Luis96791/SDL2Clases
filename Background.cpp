@@ -1,5 +1,8 @@
 #include "Background.h"
 
+/**
+    \brief Crea un nuevo Background
+*/
 Background::Background(SDL_Renderer* renderer, char* name_texture, int x, int y, int w, int h)
 {
     this->texture = IMG_LoadTexture(renderer, name_texture);
@@ -9,6 +12,9 @@ Background::Background(SDL_Renderer* renderer, char* name_texture, int x, int y,
     this->rect_texture.h = h;
 }
 
+/**
+    @param mostrar Background
+*/
 void Background::showBackground(SDL_Renderer* renderer)
 {
     SDL_RenderCopy(renderer, this->texture, NULL, &this->rect_texture);

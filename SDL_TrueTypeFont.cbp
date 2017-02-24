@@ -40,6 +40,8 @@
 		<Unit filename="KeyPressed.h" />
 		<Unit filename="Mouse.cpp" />
 		<Unit filename="Mouse.h" />
+		<Unit filename="Text.cpp" />
+		<Unit filename="Text.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
