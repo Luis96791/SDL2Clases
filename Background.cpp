@@ -3,11 +3,24 @@
 /**
     \brief Crea un nuevo Background
 */
-Background::Background(SDL_Renderer* renderer, char* name_texture, int x, int y, int w, int h)
+Background::Background(char* name_texture, SDL_Renderer* renderer)
 {
-    this->texture = IMG_LoadTexture(renderer, name_texture);
+    this->renderer = renderer;
+    this->texture = IMG_LoadTexture(this->renderer, name_texture);
+    this->rect_texture.x = 0;
+    this->rect_texture.y = 0;
+    this->rect_texture.w = 200;
+    this->rect_texture.h = 200;
+}
+
+void Background::setPosition(int x, int y)
+{
     this->rect_texture.x = x;
     this->rect_texture.y = y;
+}
+
+void Background::resizeBackground(int w, int h)
+{
     this->rect_texture.w = w;
     this->rect_texture.h = h;
 }
@@ -15,9 +28,9 @@ Background::Background(SDL_Renderer* renderer, char* name_texture, int x, int y,
 /**
     @param mostrar Background
 */
-void Background::showBackground(SDL_Renderer* renderer)
+void Background::showBackground()
 {
-    SDL_RenderCopy(renderer, this->texture, NULL, &this->rect_texture);
+    SDL_RenderCopy(this->renderer, this->texture, NULL, &this->rect_texture);
 }
 
 Background::~Background()

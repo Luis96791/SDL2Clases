@@ -37,11 +37,14 @@ int main()
         return 0;
     }
 
-    Background* background = new Background(renderer, "rectangle2.png", 0, 0, 1200, 600);
-    Text* text = new Text("Vera.ttf", 30, renderer);
+    Background* background = new Background("rectangle1.png", renderer);
+    background->resizeBackground(1200, 600);
+
+    Text* text = new Text("Vera.ttf",renderer);
     text->editText("Hello World...!");
-    text->setColor(120, 56, 96, 0);
-    text->positionOfTexture(90, 20);
+    text->setColor(120, 90, 150, 0);
+    text->setPositionOfText(90, 20);
+    text->setFontSize(50);
 
     while( 1 )
     {
@@ -52,7 +55,7 @@ int main()
         }
 
         SDL_RenderClear(renderer);
-        background->showBackground(renderer);
+        background->showBackground();
         text->showText();
 
         SDL_RenderPresent(renderer);

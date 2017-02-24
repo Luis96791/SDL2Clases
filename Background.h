@@ -11,6 +11,7 @@ class Background
     public:
         SDL_Rect rect_texture;
         SDL_Texture* texture;
+        SDL_Renderer* renderer;
         int x, y, w, h;
         /**
             \brief Crea un fondo para la ventana(Constructor).
@@ -21,12 +22,13 @@ class Background
             \param int ancho
             \param int altura
         */
-        Background(SDL_Renderer* renderer, char* name_texture, int x, int y, int w, int h);
+        Background(char* name_texture, SDL_Renderer* renderer);
         /**
             \brief Muestra el background en pantalla
-            \param SDL_Renderer* pasado de parametro a SDL_RenderCopy(...)
         */
-        void showBackground(SDL_Renderer* renderer);
+        void setPosition(int x, int y);
+        void resizeBackground(int w, int h);
+        void showBackground();
         virtual ~Background();
     protected:
     private:
