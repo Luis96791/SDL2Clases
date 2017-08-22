@@ -25,6 +25,7 @@ class Character
         void moveToDown(int move_units, SDL_Keycode keycode);
         int getRectPositionX();
         bool collisionWithBorder(const int WINDOW_WIDTH, const int WINDOW_HEIGHT, string direction);
+        bool collisionBetweenCharacters(SDL_Rect rect_character1, SDL_Rect rect_character2);
         virtual ~Character();
     protected:
     private:

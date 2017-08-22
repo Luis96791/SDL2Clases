@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1487967868 source:/home/luis/Escritorio/SDL_TrueTypeFont/main.cpp
+1503332587 source:/home/luis/Escritorio/SDL_TrueTypeFont/main.cpp
 	<iostream>
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
@@ -9,6 +9,7 @@
 	"Character.h"
 	"KeyPressed.h"
 	"Mouse.h"
+	"StringInput.h"
 	<stdio.h>
 	<stdlib.h>
 
@@ -37,10 +38,10 @@
 1487948429 source:/home/luis/Escritorio/SDL_TrueTypeFont/Background.cpp
 	"Background.h"
 
-1487968169 source:/home/luis/Escritorio/SDL_TrueTypeFont/Character.cpp
+1503331646 source:/home/luis/Escritorio/SDL_TrueTypeFont/Character.cpp
 	"Character.h"
 
-1487968019 /home/luis/Escritorio/SDL_TrueTypeFont/Character.h
+1503331290 /home/luis/Escritorio/SDL_TrueTypeFont/Character.h
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 	<iostream>
@@ -60,10 +61,17 @@
 	<SDL2/SDL.h>
 	<iostream>
 
-1487951784 source:/home/luis/Escritorio/SDL_TrueTypeFont/Text.cpp
+1492724251 source:/home/luis/Escritorio/SDL_TrueTypeFont/Text.cpp
 	"Text.h"
 
 1487951501 /home/luis/Escritorio/SDL_TrueTypeFont/Text.h
 	<iostream>
 	<SDL2/SDL_ttf.h>
+
+1492638338 source:/home/luis/Escritorio/SDL_TrueTypeFont/StringInput.cpp
+	"StringInput.h"
+
+1492635480 /home/luis/Escritorio/SDL_TrueTypeFont/StringInput.h
+	<SDL2/SDL.h>
+	<iostream>
 
